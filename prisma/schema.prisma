@@ -9,3 +9,23 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id    String  @id @default(uuid())
+  email String  @unique
+  name  String?
+  rooms Room[]
+}
+
+model Room {
+  name     String  @id
+  author   User    @relation(fields: [authorId], references: [id])
+  authorId String
+  chores   Chore[]
+}
+
+model Chore {
+  name       String  @id
+  isFinished Boolean @default(false)
+  rooms      Room[]
+}
