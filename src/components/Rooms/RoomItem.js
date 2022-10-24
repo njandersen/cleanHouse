@@ -20,9 +20,6 @@ export default function RoomItem(props) {
         <h1 className="mb-3 text-xl w-64">{props.name}:</h1>
       </div>
       <hr />
-      <div className="mt-1">
-        <ChoresList chores={DUMMY_CHORES} />
-      </div>
     </li>
   );
 }
