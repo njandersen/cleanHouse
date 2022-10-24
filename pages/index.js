@@ -18,7 +18,6 @@ const DUMMY_ROOMS = [
 export default function Home() {
   return (
     <>
-      <div>Welcome to cleanHouse!</div>
       <div>
         <h1 className="text-3xl">Rooms</h1>
         <RoomsList rooms={DUMMY_ROOMS} />

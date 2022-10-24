@@ -15,11 +15,12 @@ const DUMMY_CHORES = [
 
 export default function RoomItem(props) {
   return (
-    <li className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-black mb-6 ml-3 mt-8">
+    <li className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-black mb-6 mt-8 p-3 ">
       <div>
-        <h1 className="mb-3 text-xl">{props.name}:</h1>
+        <h1 className="mb-3 text-xl w-64">{props.name}:</h1>
       </div>
-      <div>
+      <hr />
+      <div className="mt-1">
         <ChoresList chores={DUMMY_CHORES} />
       </div>
     </li>
