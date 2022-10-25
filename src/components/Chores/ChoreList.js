@@ -1,12 +1,10 @@
 import ChoreItem from "./ChoreItem";
 
-export default function ChoresList(props) {
+export default function ChoresList({ chore }) {
   return (
     <>
       <ul>
-        {props.chores.map((chore) => (
-          <ChoreItem key={chore.id} name={chore.name} status={chore.finished} />
-        ))}
+        <ChoreItem key={chore.id} name={chore.name} status={chore.finished} />
       </ul>
     </>
   );

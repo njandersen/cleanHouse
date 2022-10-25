@@ -1,4 +1,3 @@
-import RoomItem from "./RoomItem";
 import ChoresList from "../Chores/ChoreList";
 
 export default function RoomsList({ rooms }) {
@@ -11,8 +10,8 @@ export default function RoomsList({ rooms }) {
           </h1>
           <hr />
           <ul>
-            {room.chores.map((chore, i) => (
-              <li key={i}>{chore.name}</li>
+            {room.chores.map((chore) => (
+              <ChoresList chore={chore} />
             ))}
           </ul>
         </div>
