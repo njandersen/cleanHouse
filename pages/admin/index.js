@@ -25,8 +25,7 @@ export async function getStaticProps() {
   });
 
   return {
-    props: { rooms },
-    revalidate: 10,
+    props: { rooms: rooms },
   };
 }
 
@@ -37,6 +36,16 @@ export default function AdminRooms({ rooms }) {
         <h1 className="text-3xl">Rooms</h1>
         <RoomsList rooms={rooms} />
       </div>
+      {/* {rooms.map((room, id) => (
+        <div>
+          <ul>
+            <li key={id}>{room.name}</li>
+            {room.chores.map((chore, i) => (
+              <li key={i}>{chore.name}</li>
+            ))}
+          </ul>
+        </div>
+      ))} */}
     </>
   );
 }
