@@ -5,7 +5,7 @@ import darkMode from "../../hooks/darkMode";
 export default function NavBar({}) {
   return (
     <div className="flex flex-row items-center justify-evenly bg-gray-300 bg-opacity-90 w-full h-16 m-0 shadow-lg dark:bg-gray-700">
-      <h1>cleanHouse</h1>
+      <h1 className="text-3xl">cleanHouse</h1>
       <ThemeIcon />
     </div>
   );
